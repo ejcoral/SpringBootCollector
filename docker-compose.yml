@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  dashboard-db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'JiraCollector'
+      MYSQL_USER: 'dashboard'
+      MYSQL_PASSWORD: 'dashboard'
+      MYSQL_ROOT_PASSWORD: 'dashboard'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
